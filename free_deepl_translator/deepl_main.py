@@ -134,6 +134,7 @@ class Deepl:
                     data = [msgpack.unpackb(i) for i in data]
                     for i in data:
                         if len(i) >= 4 and i[3] == "OnError":
+                            self.output = ""
                             self.loop.call_soon_threadsafe(self.loop.stop)
                             self.connection = None
                             self.last_error = ProtobufAddNames(blackboxprotobuf.decode_message(i[4][0].data)[0],"ClientErrorInfo")["detailCode"]["value"].decode()
@@ -179,18 +180,19 @@ class Deepl:
                 lst.append({'fieldName': 2, 'setPropertyOperation': {'propertyName': 10, 'translatorGlossaryListValue': {'1': glosarry_lst[0]}}, 'participantId': {'value': 2}})
             elif (len(glosarry_lst) > 1):
                 lst.append({'fieldName': 2, 'setPropertyOperation': {'propertyName': 10, 'translatorGlossaryListValue': {'1': glosarry_lst}}, 'participantId': {'value': 2}})
-        if (target_model != None):
-            lst.append({'fieldName': 2, 'setPropertyOperation': {'propertyName': 16, 'translatorLanguageModelValue': {'1': {'1': target_model.encode()}}}, 'participantId': {'value': 2}})
+        else:
+            lst.append({'fieldName': 2, 'setPropertyOperation': {'propertyName': 10, 'translatorGlossaryListValue': {'1': []}}, 'participantId': {'value': 2}})
         lst.append({'fieldName': 2, 'setPropertyOperation': {'propertyName': 5, 'translatorRequestedTargetLanguageValue': {'1': {'1': target_lang.encode()}}}, 'participantId': {'value': 2}})
         if (source_lang == None):
             lst.append({'fieldName': 1, 'setPropertyOperation': {'propertyName': 3}, 'participantId': {'value': 2}})
         else:
             lst.append({'fieldName': 1, 'setPropertyOperation': {'propertyName': 3, 'translatorRequestedSourceLanguageValue': {'1': {'1': source_lang.encode()}}}, 'participantId': {'value': 2}})
+        if (target_model != None):
+            lst.append({'fieldName': 2, 'setPropertyOperation': {'propertyName': 16, 'translatorLanguageModelValue': {'1': {'1': target_model.encode()}}}, 'participantId': {'value': 2}})
         lst.append({'fieldName': 1, 'textChangeOperation': {'range': {"end":len(self.input)}, 'text': text.encode()}, 'participantId': {'value': 2}})
         translate_text = ProtobufRemoveNames({'appendMessage': {'events': lst, 'baseVersion': {'value': {'1': self.bver}}}}, "ParticipantRequest")
         self.input = text
         translate = msgpackPack([msgpack.packb([2, {}, '1', msgpack.ExtType(4, bytes(blackboxprotobuf.encode_message(translate_text, dtype)))])])    
-        self.output = ""
         await asyncio.create_task(self.send_request(self.compute_url(),"post", data = translate, can_websocket = True))
         msgs = await asyncio.create_task(self.pop_message())
         if (msgs == None or msgs[0][3] == "OnError"):
@@ -248,7 +250,7 @@ class Deepl:
         url_nego = f"https://ita-{self.auth_name}.www.deepl.com/v1/sessions/negotiate?negotiateVersion=1"
         self.connection = None
         self.nego_token = await asyncio.create_task(self.send_request(url_nego,"post", out = "json"))
-        if (self.nego_token == None or self.last_status_code != 200):
+        if (self.nego_token == None or self.nego_token.get("connectionToken") == None or self.last_status_code != 200):
             return False
         self.loop.call_soon_threadsafe(lambda: asyncio.create_task(self.listener()))
         

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "free-deepl-translator"
+version = "1.1.2"
+description = "Unofficial free DeepL translator client (No auth)"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { text = "MIT" }
+authors = [
+    { name = "Darkcraft" }
+]
+dependencies = [
+    "curl_cffi>=0.6.0",
+    "msgpack>=1.0.0",
+    "blackboxprotobuf>=1.0.0"
+]
+requires-python = ">=3.8"

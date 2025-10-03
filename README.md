@@ -19,19 +19,21 @@ pip install free-deepl-translator
 import free_deepl_translator as deepl
 
 # Create the client
-deepl_instance = deepl.Deepl()
+deepl_instance = deepl.DeeplTranslator()
 
 # Create a session (returns True on success and False on failure)
-d = deepl_instance.Session()
+d = deepl_instance.Session() # use *.SessionAsync() for async version
 
-assert d is True
+if d != True:
+    print(f"Error")
+    exit(1)
 print("Session created")
 
 # Simple translate to French
-translated = deepl_instance.Translate("H-h-how are you ?", target_lang="fr")
+translated = deepl_instance.Translate("H-h-how are you ?\nPlease answer me", target_lang="fr") # use *.TranslateAsync() for async version
 if translated["status"] == 0:
     print(f"Translated text: {translated['text']}")
-
+#time.sleep(5)
 # Translate from French to English
 translated = deepl_instance.Translate("Je vais bien, merci", target_lang="en", source_lang="fr")
 if translated["status"] == 0:
@@ -40,27 +42,30 @@ if translated["status"] == 0:
 # Advanced call: specify model, glossary and formality
 translated = deepl_instance.Translate(
     "Can you please send me the report?",
-    target_lang="fr",
+    target_lang="ja",
     source_lang="en",
     target_model="next-gen",
-    glossary=[{"source": "report", "target": "vidéo"}],
-    formality="informal",
+    glossary=[{"source": "report", "target": "動画"}],
+    formality="formal",
 )
 if translated["status"] == 0:
     print(f"Translated text: {translated['text']}")
+
+# Close the Session
+deepl_instance.Close() # use *.CloseAsync() for async version
 ```
 
-To use it with Async you can use `SessionAsync()` and `TranslateAsync()`.
+To use it with Async you can use `SessionAsync()`, `TranslateAsync()` and `CloseAsync()`.
 
 ## Return format
 
 `Translate()` and `TranslateAsync()` return a dictionary like:
 
-```json
+```python
 {
   "status": 0,    # 0 = success, non-zero = error
-  "text": "..." # translated text when successful
-  "msg": "..." # error message (when status != 0)
+  "text": "...", # translated text when successful
+  "msg": "...", # error message (when status != 0)
 }
 ```
 
@@ -71,5 +76,3 @@ To use it with Async you can use `SessionAsync()` and `TranslateAsync()`.
 - `target_model` selection (e.g. `next-gen` or `classic`).
 - Glossary entries (list of `{source, target}` mappings).
 - `formality | tone` control.
-
-

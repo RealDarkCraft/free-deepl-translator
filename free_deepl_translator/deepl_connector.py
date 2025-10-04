@@ -21,17 +21,25 @@ class DeeplConnection:
         self._recv_task = None
         self.status = None
         self.OnError = False
+        self.OnErrorLast = ""
     async def format_res(self, res):
         if res[-1] == 0x1e and res[0] == 123 and res[-2] == 125:
             return json.loads(res[:-1])
         data = msgpackUnpack(res)
         data = [msgpack.unpackb(i) for i in data]
+        return_data = []
         for i in data:
             if len(i) >= 4 and i[3] == "OnError":
+                self.OnErrorLast = ProtobufAddNames(blackboxprotobuf.decode_message(i[4][0].data)[0],"ClientErrorInfo")["detailCode"]["value"].decode()
                 await self.close()
                 self.status = False
                 self.OnError = True
-        return data
+                return_data.append(i)
+            elif (i[0] == 6):
+                await self.send(msgpackPack([msgpack.packb([6])]))
+            else:
+                return_data.append(i)
+        return return_data
     async def ws_connect(self, url: str):
         self.conn = await self.client.ws_connect(url, impersonate="firefox")
         self._recv_task = asyncio.create_task(self._recv_loop())

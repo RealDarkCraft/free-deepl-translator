@@ -62,7 +62,7 @@ class DeeplTranslator:
         if (trans ==  ""):
             return {"status":1,"msg":""}
         elif (trans == None):
-            return {"status":1,"msg":self.last_error}
+            return {"status":1,"msg":self.connection.OnErrorLast}
         return {"status":0,"text":trans}
 
     def Translate(self, text, target_lang, source_lang = None, target_model = None, glossary = None, formality = None):
@@ -111,7 +111,7 @@ class DeeplTranslator:
         true = True
         while true:
             i = await self.connection.pop_message()
-            if (i == None):
+            if (i == None or i[3] == "OnError"):
                 return None
             decoded, data_type = blackboxprotobuf.decode_message(i[3].data)
             try:

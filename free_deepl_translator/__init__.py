@@ -1,1 +1,0 @@
-from .deepl_translator import DeeplTranslator

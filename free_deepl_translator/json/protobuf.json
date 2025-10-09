@@ -1,0 +1,1998 @@
+{
+    "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativesFlowId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativeDiff": {
+        "1": {
+            "name": "sourceRange",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        },
+        "2": {
+            "name": "alternativeRange",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.RequestTextUnitAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativesFlowId"
+        }
+    },
+    "google.protobuf.Timestamp": {
+        "1": {
+            "name": "seconds",
+            "type": "int"
+        },
+        "2": {
+            "name": "nanos",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.SelectWordAlternativeAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.WordAlternativesFlowId"
+        },
+        "2": {
+            "name": "selection",
+            "type": "string"
+        }
+    },
+    "google.protobuf.Int32Value": {
+        "1": {
+            "name": "value",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.AnnotationId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryAnnotationPayload": {
+        "1": {
+            "name": "id",
+            "type": "string"
+        },
+        "2": {
+            "name": "sourceText",
+            "type": "string"
+        },
+        "3": {
+            "seen_repeated": true,
+            "name": "matches",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryMatch"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryMatch": {
+        "1": {
+            "name": "matchedText",
+            "type": "string"
+        },
+        "2": {
+            "name": "translation",
+            "type": "string"
+        },
+        "3": {
+            "name": "score",
+            "type": "float"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "google.protobuf.Duration": {
+        "1": {
+            "name": "seconds",
+            "type": "int"
+        },
+        "2": {
+            "name": "nanos",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.DiffUnitAnnotationPayload": {
+        "1": {
+            "name": "diffUnitId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.DiffUnitId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ProvidedTextUnitAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativesFlowId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "alternatives",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TextUnitAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ProvidedAutomaticTextUnitAlternativesAnnotationPayload": {
+        "1": {
+            "seen_repeated": true,
+            "name": "alternatives",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TextUnitAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.LanguagesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "languages",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.Language"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.GlossaryLanguagesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "languages",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.Language"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.RequestedLanguagePropertyValue": {
+        "1": {
+            "name": "language",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.Language"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.CalculatedLanguagePropertyValue": {
+        "1": {
+            "name": "language",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.Language"
+        },
+        "2": {
+            "name": "origin",
+            "type": "int"
+        },
+        "3": {
+            "name": "isLanguageDetectionConfident",
+            "type": "uint"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.GlossaryIdPropertyValue": {
+        "1": {
+            "name": "glossaryId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.glossaries.GlossaryId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.StyleGuideIdPropertyValue": {
+        "1": {
+            "name": "styleGuideId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.styleguides.StyleGuideId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.CorrectionsOnlyPropertyValue": {
+        "1": {
+            "name": "correctionsOnly",
+            "type": "uint"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.FreeTextPromptListPropertyValue": {
+        "1": {
+            "name": "freeTextPromptList",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.free_text_prompts.FreeTextPromptList"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.MaximumTextLengthPropertyValue": {
+        "1": {
+            "name": "max",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.StyleVariantsPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "styleVariants",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.StyleVariantPropertyValue": {
+        "1": {
+            "name": "styleVariant",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.UnsupportedLanguagePropertyValue": {},
+    "deepl.pb.interactive_text_api.write.InlineSuggestionsLoadingPropertyValue": {},
+    "deepl.pb.interactive_text_api.write.DiffUnitId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.GlossaryEntry": {
+        "1": {
+            "name": "term",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.GlossaryListPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "glossaryEntries",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossaryEntry"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.GlossarySupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.write.StyleGuideSupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.write.CorrectionsOnlySupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.write.TextUnitAlternativesSupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.write.GlossaryHighlight": {
+        "1": {
+            "name": "entry",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossaryEntry"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "ranges",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.Language": {
+        "1": {
+            "name": "code",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.TextUnitAlternative": {
+        "1": {
+            "name": "text",
+            "type": "string"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "glossaryHighlights",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossaryHighlight"
+        },
+        "3": {
+            "seen_repeated": true,
+            "name": "diffs",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativeDiff"
+        },
+        "4": {
+            "name": "rephraseVariant",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RephraseVariant"
+        },
+        "5": {
+            "seen_repeated": true,
+            "name": "customRuleHighlights",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.styleguides.CustomRuleHighlight"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.RephraseVariant": {
+        "1": {
+            "name": "name",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.StyleVariant": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ChangeStyleAlternativesFlowId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.RequestChangeStyleAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ChangeStyleAlternativesFlowId"
+        },
+        "2": {
+            "name": "styleVariant",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ChangeStyleAlternative": {
+        "1": {
+            "name": "text",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ProvidedChangeStyleAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ChangeStyleAlternativesFlowId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "alternatives",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ChangeStyleAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.SelectChangeStyleAlternativeAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ChangeStyleAlternativesFlowId"
+        },
+        "2": {
+            "name": "selection",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.TemplateAdaptationTemplateId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.TemplateAdaptationTemplatesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "templateIds",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TemplateAdaptationTemplateId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.TemplateAdaptationFlowId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.RequestTemplateAdaptationAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TemplateAdaptationFlowId"
+        },
+        "2": {
+            "name": "input",
+            "type": "string"
+        },
+        "3": {
+            "seen_repeated": true,
+            "name": "templateIds",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TemplateAdaptationTemplateId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.TemplateAdaptationAdaptedText": {
+        "1": {
+            "name": "text",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ProvidedTemplateAdaptationAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TemplateAdaptationFlowId"
+        },
+        "2": {
+            "name": "adaptedText",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TemplateAdaptationAdaptedText"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.InlineSuggestionId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.InlineSuggestionAnnotationPayload": {
+        "1": {
+            "name": "id",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "categories",
+            "type": "int"
+        },
+        "3": {
+            "name": "description",
+            "type": "string"
+        },
+        "4": {
+            "name": "userChoice",
+            "type": "int"
+        },
+        "5": {
+            "seen_repeated": true,
+            "name": "originalSpans",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.InlineSuggestionSpanAnnotationPayload": {
+        "1": {
+            "name": "id",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ActOnInlineSuggestionAnnotationPayload": {
+        "1": {
+            "name": "inlineSuggestionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionId"
+        },
+        "2": {
+            "name": "userChoice",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.InlineSuggestionsTextUnitStateAnnotationPayload": {
+        "1": {
+            "name": "textUnitId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_units.TextUnitId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "inlineSuggestionIds",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionId"
+        },
+        "3": {
+            "name": "originalText",
+            "type": "string"
+        },
+        "4": {
+            "name": "improvedText",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.RequestInlineSuggestionImprovedTextAnnotationPayload": {
+        "1": {
+            "name": "inlineSuggestionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionId"
+        }
+    },
+    "deepl.pb.interactive_text_api.write.ProvidedInlineSuggestionImprovedTextAnnotationPayload": {
+        "1": {
+            "name": "inlineSuggestionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionId"
+        },
+        "2": {
+            "name": "improvedText",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.WordAlternative": {
+        "1": {
+            "name": "text",
+            "type": "string"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "targetHighlights",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.AnnotationId"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.ProvidedWordAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.WordAlternativesFlowId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "alternatives",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.WordAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.styleguides.StyleGuideId": {
+        "1": {
+            "name": "id",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.RequestWordAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.WordAlternativesFlowId"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingAnnotationPayload": {
+        "1": {
+            "name": "textFormattingId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingId"
+        },
+        "2": {
+            "name": "name",
+            "type": "string"
+        },
+        "3": {
+            "seen_repeated": true,
+            "name": "children",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingId"
+        },
+        "4": {
+            "seen_repeated": true,
+            "name": "attributes",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingAnnotationPayload.AttributesEntry"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingAnnotationPayload.AttributesEntry": {
+        "1": {
+            "name": "key",
+            "type": "string"
+        },
+        "2": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.glossaries.GlossaryId": {
+        "1": {
+            "name": "id",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.styleguides.CustomRuleHighlight": {
+        "1": {
+            "name": "id",
+            "type": "string"
+        },
+        "2": {
+            "name": "isFreeTextRule",
+            "type": "uint"
+        },
+        "3": {
+            "name": "kind",
+            "type": "int"
+        },
+        "4": {
+            "seen_repeated": true,
+            "name": "ranges",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        },
+        "5": {
+            "seen_repeated": true,
+            "name": "originalRanges",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        },
+        "6": {
+            "name": "description",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.styleguides.CustomRuleAnnotationPayload": {
+        "1": {
+            "name": "id",
+            "type": "string"
+        },
+        "2": {
+            "name": "isFreeTextRule",
+            "type": "uint"
+        },
+        "3": {
+            "name": "kind",
+            "type": "int"
+        },
+        "6": {
+            "name": "description",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.SelectAutomaticTextUnitAlternativeAnnotationPayload": {
+        "1": {
+            "name": "selection",
+            "type": "string"
+        },
+        "2": {
+            "name": "rephraseVariant",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RephraseVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemory": {
+        "1": {
+            "name": "id",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryId"
+        },
+        "2": {
+            "name": "name",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.RequestAutocompletionAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.AutocompletionFlowId"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ProvidedAutocompletionAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.AutocompletionFlowId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "autocompletions",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TextUnitAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SelectAutocompletionAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.AutocompletionFlowId"
+        },
+        "2": {
+            "name": "selection",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.GlossaryReplacementAnnotationPayload": {
+        "1": {
+            "name": "replacement",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryEntry"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ProvidedTextUnitAlternativesAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativesFlowId"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "alternatives",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TextUnitAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ProvidedAutomaticTextUnitAlternativesAnnotationPayload": {
+        "1": {
+            "seen_repeated": true,
+            "name": "alternatives",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TextUnitAlternative"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.RequestClarifyAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyFlowId"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyStatusAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyFlowId"
+        },
+        "2": {
+            "name": "referenceId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.AnnotationId"
+        },
+        "3": {
+            "name": "status",
+            "type": "int"
+        },
+        "4": {
+            "name": "errorInfo",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyErrorInfo"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ProvidedClarifyHighlightAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyFlowId"
+        },
+        "2": {
+            "name": "questionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyQuestionId"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ProvidedClarifyQuestionAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyFlowId"
+        },
+        "2": {
+            "name": "questionWithAnswers",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyQuestionWithAnswers"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SelectClarifyAnswerAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyFlowId"
+        },
+        "2": {
+            "name": "questionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyQuestionId"
+        },
+        "3": {
+            "name": "answer",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifySelectedAnswer"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.RequestRephraseTargetTextAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SourceLanguagesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "sourceLanguages",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguage"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.TargetLanguagesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "targetLanguages",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TargetLanguage"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.RequestedSourceLanguagePropertyValue": {
+        "1": {
+            "name": "sourceLanguage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguage"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.CalculatedSourceLanguagePropertyValue": {
+        "1": {
+            "name": "sourceLanguage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguage"
+        },
+        "2": {
+            "name": "origin",
+            "type": "int"
+        },
+        "3": {
+            "name": "isLanguageDetectionConfident",
+            "type": "uint"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.RequestedTargetLanguagePropertyValue": {
+        "1": {
+            "name": "targetLanguage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TargetLanguage"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.CalculatedTargetLanguagePropertyValue": {
+        "1": {
+            "name": "targetLanguage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TargetLanguage"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.GlossaryIdPropertyValue": {
+        "1": {
+            "name": "glossaryId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.glossaries.GlossaryId"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.StyleGuideIdPropertyValue": {
+        "1": {
+            "name": "styleGuideId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.styleguides.StyleGuideId"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.InterfaceLanguagePropertyValue": {
+        "1": {
+            "name": "interfaceLanguage",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.FreeTextPromptListPropertyValue": {
+        "1": {
+            "name": "freeTextPromptList",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.free_text_prompts.FreeTextPromptList"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.GlossarySupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.translator.StyleGuideSupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.translator.RtfSupportPropertyValue": {},
+    "deepl.pb.interactive_text_api.translator.TaskMetaInfo": {
+        "1": {
+            "name": "progressInPercent",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.FormalityModesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "formalityModes",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.FormalityMode"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.FormalityModePropertyValue": {
+        "1": {
+            "name": "formalityMode",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.FormalityMode"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.LanguageModelsPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "languageModels",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModel"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.LanguageModelPropertyValue": {
+        "1": {
+            "name": "languageModel",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModel"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.TextDirectionPropertyValue": {
+        "1": {
+            "name": "textDirection",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.MaximumTextLengthPropertyValue": {
+        "1": {
+            "name": "max",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.UnsupportedSourceLanguagePropertyValue": {},
+    "deepl.pb.interactive_text_api.translator.SourceLanguageDetectionWeightsPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "weights",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguageDetectionWeight"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.StyleVariantsPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "styleVariants",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.StyleVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.StyleVariantPropertyValue": {
+        "1": {
+            "name": "styleVariant",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.StyleVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.TranslationMemoryListPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "translationMemories",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemory"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SelectedTranslationMemoryPropertyValue": {
+        "1": {
+            "name": "translationMemoryId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryId"
+        },
+        "2": {
+            "name": "threshold",
+            "type": "float"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.RephraseTargetTextStatusPropertyValue": {
+        "1": {
+            "name": "rephraseTargetTextStatus",
+            "type": "int"
+        },
+        "2": {
+            "name": "flowId",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SessionOptions": {
+        "1": {
+            "name": "enableTranscription",
+            "type": "uint"
+        },
+        "2": {
+            "name": "enableTranslatorQuoteConversion",
+            "type": "uint"
+        },
+        "3": {
+            "name": "disableLanguageWeights",
+            "type": "uint"
+        },
+        "4": {
+            "name": "doNotOverrideRequestedSourceLanguage",
+            "type": "uint"
+        },
+        "5": {
+            "name": "enableInlineSuggestions",
+            "type": "uint"
+        },
+        "6": {
+            "name": "usageType",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.FormalityMode": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.LanguageModel": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.LanguageModelPreference": {
+        "1": {
+            "name": "sourceLanguage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguage"
+        },
+        "2": {
+            "name": "targetLanguage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TargetLanguage"
+        },
+        "3": {
+            "name": "model",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModel"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.LanguageModelPreferencesPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "preferences",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModelPreference"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.GlossaryEntry": {
+        "1": {
+            "name": "source",
+            "type": "string"
+        },
+        "2": {
+            "name": "target",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.GlossaryListPropertyValue": {
+        "1": {
+            "seen_repeated": true,
+            "name": "glossaryEntries",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryEntry"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.GlossaryHighlight": {
+        "1": {
+            "name": "entry",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryEntry"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "ranges",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SourceLanguage": {
+        "1": {
+            "name": "code",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.TargetLanguage": {
+        "1": {
+            "name": "code",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.TextUnitAlternative": {
+        "1": {
+            "name": "text",
+            "type": "string"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "glossaryHighlights",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryHighlight"
+        },
+        "3": {
+            "name": "transcription",
+            "type": "string"
+        },
+        "4": {
+            "seen_repeated": true,
+            "name": "diffs",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativeDiff"
+        },
+        "5": {
+            "seen_repeated": true,
+            "name": "customRuleHighlights",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.styleguides.CustomRuleHighlight"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.SourceLanguageDetectionWeight": {
+        "1": {
+            "name": "language",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguage"
+        },
+        "2": {
+            "name": "weight",
+            "type": "double"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyQuestion": {
+        "1": {
+            "name": "id",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyQuestionId"
+        },
+        "2": {
+            "name": "title",
+            "type": "string"
+        },
+        "3": {
+            "name": "question",
+            "type": "string"
+        },
+        "4": {
+            "name": "category",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyAnswer": {
+        "1": {
+            "name": "answer",
+            "type": "string"
+        },
+        "2": {
+            "name": "isDefault",
+            "type": "uint"
+        },
+        "3": {
+            "name": "hint",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyQuestionWithAnswers": {
+        "1": {
+            "name": "question",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyQuestion"
+        },
+        "2": {
+            "seen_repeated": true,
+            "name": "answers",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyAnswer"
+        },
+        "3": {
+            "name": "language",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifySelectedAnswer": {
+        "1": {
+            "name": "answer",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyFlowId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyQuestionId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.ClarifyErrorInfo": {
+        "1": {
+            "name": "errorCode",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.translator.StyleVariant": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.AutocompletionFlowId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.signalr.DetailCode": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.signalr.ClientErrorInfo": {
+        "1": {
+            "name": "statusCode",
+            "type": "int"
+        },
+        "2": {
+            "name": "detailCode",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.signalr.DetailCode"
+        },
+        "3": {
+            "seen_repeated": true,
+            "name": "fallbackDetailCodes",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.signalr.DetailCode"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.text_units.TextUnitAnnotationPayload": {
+        "1": {
+            "name": "textUnitId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_units.TextUnitId"
+        },
+        "2": {
+            "name": "isUserEdited",
+            "type": "uint"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.ProvidedWordAlternativeHighlightPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.WordAlternativesFlowId"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.free_text_prompts.FreeTextPromptList": {
+        "1": {
+            "seen_repeated": true,
+            "name": "prompts",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.TextRange": {
+        "1": {
+            "name": "start",
+            "type": "int"
+        },
+        "2": {
+            "name": "end",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.SelectTextUnitAlternativeAnnotationPayload": {
+        "1": {
+            "name": "flowId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.TextUnitAlternativesFlowId"
+        },
+        "2": {
+            "name": "selection",
+            "type": "string"
+        },
+        "3": {
+            "name": "rephraseVariant",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RephraseVariant"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.alternatives.WordAlternativesFlowId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.common.text_units.TextUnitId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.TextChangeOperation": {
+        "1": {
+            "name": "range",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        },
+        "2": {
+            "name": "text",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.CreateAnnotationOperation": {
+        "1": {
+            "name": "annotationId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.AnnotationId"
+        },
+        "2": {
+            "name": "range",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextRange"
+        },
+        "3": {
+            "name": "textUnitPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_units.TextUnitAnnotationPayload"
+        },
+        "4": {
+            "name": "requestWordAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.RequestWordAlternativesAnnotationPayload"
+        },
+        "5": {
+            "name": "providedWordAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.ProvidedWordAlternativesAnnotationPayload"
+        },
+        "6": {
+            "name": "selectWordAlternativePayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.SelectWordAlternativeAnnotationPayload"
+        },
+        "7": {
+            "name": "translatorGlossaryReplacementPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryReplacementAnnotationPayload"
+        },
+        "8": {
+            "name": "requestTextUnitAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.RequestTextUnitAlternativesAnnotationPayload"
+        },
+        "9": {
+            "name": "translatorProvidedTextUnitAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ProvidedTextUnitAlternativesAnnotationPayload"
+        },
+        "10": {
+            "name": "selectTextUnitAlternativePayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.SelectTextUnitAlternativeAnnotationPayload"
+        },
+        "11": {
+            "name": "translatorRequestAutocompletionPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RequestAutocompletionAnnotationPayload"
+        },
+        "12": {
+            "name": "translatorProvidedAutocompletionPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ProvidedAutocompletionAnnotationPayload"
+        },
+        "13": {
+            "name": "translatorSelectAutocompletionPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SelectAutocompletionAnnotationPayload"
+        },
+        "14": {
+            "name": "translatorProvidedAutomaticTextUnitAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ProvidedAutomaticTextUnitAlternativesAnnotationPayload"
+        },
+        "15": {
+            "name": "selectAutomaticTextUnitAlternativePayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.SelectAutomaticTextUnitAlternativeAnnotationPayload"
+        },
+        "16": {
+            "name": "writeDiffUnitPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.DiffUnitAnnotationPayload"
+        },
+        "17": {
+            "name": "textFormattingPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.text_formatting.TextFormattingAnnotationPayload"
+        },
+        "18": {
+            "name": "writeProvidedTextUnitAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ProvidedTextUnitAlternativesAnnotationPayload"
+        },
+        "19": {
+            "name": "writeProvidedAutomaticTextUnitAlternativesPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ProvidedAutomaticTextUnitAlternativesAnnotationPayload"
+        },
+        "20": {
+            "name": "translatorRequestClarifyPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RequestClarifyAnnotationPayload"
+        },
+        "21": {
+            "name": "translatorProvidedClarifyQuestionPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ProvidedClarifyQuestionAnnotationPayload"
+        },
+        "22": {
+            "name": "translatorProvidedClarifyHighlightPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ProvidedClarifyHighlightAnnotationPayload"
+        },
+        "23": {
+            "name": "translatorSelectClarifyAnswerPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SelectClarifyAnswerAnnotationPayload"
+        },
+        "24": {
+            "name": "writeRequestChangeStyleAlternativesAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RequestChangeStyleAlternativesAnnotationPayload"
+        },
+        "25": {
+            "name": "writeProvidedChangeStyleAlternativesAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ProvidedChangeStyleAlternativesAnnotationPayload"
+        },
+        "26": {
+            "name": "writeSelectChangeStyleAlternativeAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.SelectChangeStyleAlternativeAnnotationPayload"
+        },
+        "27": {
+            "name": "translatorClarifyStatusPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.ClarifyStatusAnnotationPayload"
+        },
+        "28": {
+            "name": "customRuleAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.styleguides.CustomRuleAnnotationPayload"
+        },
+        "29": {
+            "name": "writeRequestTemplateAdaptationAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RequestTemplateAdaptationAnnotationPayload"
+        },
+        "30": {
+            "name": "writeProvidedTemplateAdaptationAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ProvidedTemplateAdaptationAnnotationPayload"
+        },
+        "31": {
+            "name": "providedWordAlternativeHighlightPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.alternatives.ProvidedWordAlternativeHighlightPayload"
+        },
+        "32": {
+            "name": "writeInlineSuggestionAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionAnnotationPayload"
+        },
+        "33": {
+            "name": "writeInlineSuggestionSpanAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionSpanAnnotationPayload"
+        },
+        "34": {
+            "name": "writeActOnInlineSuggestionAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ActOnInlineSuggestionAnnotationPayload"
+        },
+        "35": {
+            "name": "writeInlineSuggestionsTextUnitStateAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionsTextUnitStateAnnotationPayload"
+        },
+        "36": {
+            "name": "writeRequestInlineSuggestionImprovedTextAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RequestInlineSuggestionImprovedTextAnnotationPayload"
+        },
+        "37": {
+            "name": "writeProvidedInlineSuggestionImprovedTextAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.ProvidedInlineSuggestionImprovedTextAnnotationPayload"
+        },
+        "38": {
+            "name": "translatorRequestRephraseTargetTextAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RequestRephraseTargetTextAnnotationPayload"
+        },
+        "39": {
+            "name": "translationMemoryAnnotationPayload",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.common.translation_memories.TranslationMemoryAnnotationPayload"
+        }
+    },
+    "deepl.pb.interactive_text_api.RemoveAnnotationOperation": {
+        "1": {
+            "name": "annotationId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.AnnotationId"
+        }
+    },
+    "deepl.pb.interactive_text_api.SetPropertyOperation": {
+        "1": {
+            "name": "propertyName",
+            "type": "int"
+        },
+        "2": {
+            "name": "translatorSourceLanguagesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguagesPropertyValue"
+        },
+        "3": {
+            "name": "translatorTargetLanguagesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TargetLanguagesPropertyValue"
+        },
+        "4": {
+            "name": "translatorRequestedSourceLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RequestedSourceLanguagePropertyValue"
+        },
+        "5": {
+            "name": "translatorRequestedTargetLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RequestedTargetLanguagePropertyValue"
+        },
+        "7": {
+            "name": "translatorFormalityModesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.FormalityModesPropertyValue"
+        },
+        "8": {
+            "name": "translatorFormalityModeValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.FormalityModePropertyValue"
+        },
+        "9": {
+            "name": "translatorGlossarySupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossarySupportPropertyValue"
+        },
+        "10": {
+            "name": "translatorGlossaryListValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryListPropertyValue"
+        },
+        "12": {
+            "name": "translatorTextDirectionValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TextDirectionPropertyValue"
+        },
+        "13": {
+            "name": "translatorCalculatedSourceLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.CalculatedSourceLanguagePropertyValue"
+        },
+        "14": {
+            "name": "translatorMaximumTextLengthValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.MaximumTextLengthPropertyValue"
+        },
+        "15": {
+            "name": "translatorLanguageModelsValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModelsPropertyValue"
+        },
+        "16": {
+            "name": "translatorLanguageModelValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModelPropertyValue"
+        },
+        "17": {
+            "name": "translatorGlossaryIdValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.GlossaryIdPropertyValue"
+        },
+        "18": {
+            "name": "translatorCalculatedTargetLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.CalculatedTargetLanguagePropertyValue"
+        },
+        "19": {
+            "name": "translatorUnsupportedSourceLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.UnsupportedSourceLanguagePropertyValue"
+        },
+        "20": {
+            "name": "writeLanguagesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.LanguagesPropertyValue"
+        },
+        "21": {
+            "name": "writeRequestedLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.RequestedLanguagePropertyValue"
+        },
+        "22": {
+            "name": "writeCalculatedLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.CalculatedLanguagePropertyValue"
+        },
+        "23": {
+            "name": "writeStyleVariantsValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleVariantsPropertyValue"
+        },
+        "24": {
+            "name": "writeStyleVariantValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleVariantPropertyValue"
+        },
+        "25": {
+            "name": "writeGlossaryIdValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossaryIdPropertyValue"
+        },
+        "26": {
+            "name": "writeGlossaryListValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossaryListPropertyValue"
+        },
+        "27": {
+            "name": "writeGlossarySupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossarySupportPropertyValue"
+        },
+        "28": {
+            "name": "writeMaximumTextLengthValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.MaximumTextLengthPropertyValue"
+        },
+        "29": {
+            "name": "writeUnsupportedLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.UnsupportedLanguagePropertyValue"
+        },
+        "30": {
+            "name": "translatorSourceLanguageDetectionWeightsValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SourceLanguageDetectionWeightsPropertyValue"
+        },
+        "31": {
+            "name": "writeGlossaryLanguagesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.GlossaryLanguagesPropertyValue"
+        },
+        "32": {
+            "name": "writeStyleGuideSupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleGuideSupportPropertyValue"
+        },
+        "33": {
+            "name": "writeStyleGuideIdValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.StyleGuideIdPropertyValue"
+        },
+        "34": {
+            "name": "writeTemplateAdaptationTemplatesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TemplateAdaptationTemplatesPropertyValue"
+        },
+        "35": {
+            "name": "translatorStyleGuideSupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.StyleGuideSupportPropertyValue"
+        },
+        "36": {
+            "name": "translatorStyleGuideIdValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.StyleGuideIdPropertyValue"
+        },
+        "37": {
+            "name": "interfaceLanguageValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.InterfaceLanguagePropertyValue"
+        },
+        "38": {
+            "name": "translatorLanguageModelPreferencesValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.LanguageModelPreferencesPropertyValue"
+        },
+        "39": {
+            "name": "translatorFreeTextPromptListValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.FreeTextPromptListPropertyValue"
+        },
+        "40": {
+            "name": "writeFreeTextPromptListValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.FreeTextPromptListPropertyValue"
+        },
+        "41": {
+            "name": "writeInlineSuggestionsLoadingValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.InlineSuggestionsLoadingPropertyValue"
+        },
+        "42": {
+            "name": "writeCorrectionsOnlySupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.CorrectionsOnlySupportPropertyValue"
+        },
+        "43": {
+            "name": "writeCorrectionsOnlyValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.CorrectionsOnlyPropertyValue"
+        },
+        "44": {
+            "name": "translatorRtfSupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RtfSupportPropertyValue"
+        },
+        "45": {
+            "name": "translatorStyleVariantsValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.StyleVariantsPropertyValue"
+        },
+        "46": {
+            "name": "translatorStyleVariantValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.StyleVariantPropertyValue"
+        },
+        "47": {
+            "name": "writeTextUnitAlternativesSupportValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.write.TextUnitAlternativesSupportPropertyValue"
+        },
+        "48": {
+            "name": "translatorTranslationMemoryListValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TranslationMemoryListPropertyValue"
+        },
+        "49": {
+            "name": "translatorSelectedTranslationMemoryValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SelectedTranslationMemoryPropertyValue"
+        },
+        "50": {
+            "name": "translatorRephraseTargetTextStatusValue",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.RephraseTargetTextStatusPropertyValue"
+        }
+    },
+    "deepl.pb.interactive_text_api.StartSessionRequest": {
+        "1": {
+            "name": "sessionMode",
+            "type": "int"
+        },
+        "2": {
+            "name": "baseDocument",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.BaseDocument"
+        },
+        "3": {
+            "name": "translatorSessionOptions",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.SessionOptions"
+        },
+        "4": {
+            "name": "appInformation",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.AppInformation"
+        },
+        "5": {
+            "name": "previousSessionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.SessionId"
+        }
+    },
+    "deepl.pb.interactive_text_api.StartSessionResponse": {
+        "1": {
+            "name": "sessionId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.SessionId"
+        },
+        "2": {
+            "name": "participantId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.ParticipantId"
+        },
+        "3": {
+            "name": "sessionToken",
+            "type": "string"
+        },
+        "4": {
+            "name": "versionRemovedAt",
+            "type": "message",
+            "message_type": "google.protobuf.Timestamp"
+        },
+        "5": {
+            "name": "signalrEndpoint",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.ParticipantRequest": {
+        "1": {
+            "name": "appendMessage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.AppendMessage"
+        },
+        "2": {
+            "name": "updateAuthenticationTokenMessage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.UpdateAuthenticationTokenMessage"
+        }
+    },
+    "deepl.pb.interactive_text_api.ParticipantResponse": {
+        "1": {
+            "name": "confirmedMessage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.ConfirmedMessage"
+        },
+        "2": {
+            "name": "initializedMessage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.InitializedMessage"
+        },
+        "3": {
+            "name": "publishedMessage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.PublishedMessage"
+        },
+        "4": {
+            "name": "metaInfoMessage",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.MetaInfoMessage"
+        }
+    },
+    "deepl.pb.interactive_text_api.ConfirmedMessage": {
+        "1": {
+            "name": "currentVersion",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.EventVersion"
+        },
+        "2": {
+            "name": "throttlingDelay",
+            "type": "message",
+            "message_type": "google.protobuf.Duration"
+        }
+    },
+    "deepl.pb.interactive_text_api.InitializedMessage": {},
+    "deepl.pb.interactive_text_api.PublishedMessage": {
+        "1": {
+            "seen_repeated": true,
+            "name": "events",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.FieldEvent"
+        },
+        "2": {
+            "name": "currentVersion",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.EventVersion"
+        }
+    },
+    "deepl.pb.interactive_text_api.MetaInfoMessage": {
+        "1": {
+            "name": "idle",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.Idle"
+        },
+        "2": {
+            "name": "translatorTaskMetaInfo",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.translator.TaskMetaInfo"
+        }
+    },
+    "deepl.pb.interactive_text_api.Idle": {
+        "1": {
+            "name": "eventVersion",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.EventVersion"
+        }
+    },
+    "deepl.pb.interactive_text_api.AppendMessage": {
+        "1": {
+            "seen_repeated": true,
+            "name": "events",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.FieldEvent"
+        },
+        "2": {
+            "name": "baseVersion",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.EventVersion"
+        }
+    },
+    "deepl.pb.interactive_text_api.UpdateAuthenticationTokenMessage": {
+        "1": {
+            "name": "token",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.AppInformation": {
+        "1": {
+            "name": "os",
+            "type": "string"
+        },
+        "2": {
+            "name": "osVersion",
+            "type": "string"
+        },
+        "3": {
+            "name": "appVersion",
+            "type": "string"
+        },
+        "4": {
+            "name": "appBuild",
+            "type": "string"
+        },
+        "5": {
+            "name": "instanceId",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.SessionId": {
+        "1": {
+            "name": "value",
+            "type": "string"
+        }
+    },
+    "deepl.pb.interactive_text_api.EventVersion.value": {
+        "1": {
+            "name": "value",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.EventVersion": {
+        "1": {
+            "name": "version",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.EventVersion.value"
+        }
+    },
+    "deepl.pb.interactive_text_api.FieldEvent": {
+        "1": {
+            "name": "fieldName",
+            "type": "int"
+        },
+        "2": {
+            "name": "textChangeOperation",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.TextChangeOperation"
+        },
+        "3": {
+            "name": "createAnnotationOperation",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.CreateAnnotationOperation"
+        },
+        "4": {
+            "name": "removeAnnotationOperation",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.RemoveAnnotationOperation"
+        },
+        "5": {
+            "name": "setPropertyOperation",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.SetPropertyOperation"
+        },
+        "6": {
+            "name": "participantId",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.ParticipantId"
+        }
+    },
+    "deepl.pb.interactive_text_api.ParticipantId": {
+        "1": {
+            "name": "value",
+            "type": "int"
+        }
+    },
+    "deepl.pb.interactive_text_api.BaseDocument": {
+        "1": {
+            "seen_repeated": true,
+            "name": "fields",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.Field"
+        }
+    },
+    "deepl.pb.interactive_text_api.Field": {
+        "1": {
+            "name": "fieldName",
+            "type": "int"
+        },
+        "2": {
+            "name": "text",
+            "type": "string"
+        },
+        "3": {
+            "seen_repeated": true,
+            "name": "annotations",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.CreateAnnotationOperation"
+        },
+        "4": {
+            "seen_repeated": true,
+            "name": "properties",
+            "type": "message",
+            "message_type": "deepl.pb.interactive_text_api.SetPropertyOperation"
+        }
+    }
+}

@@ -1,3 +1,5 @@
+import msgpack
+
 def msgpackPack(messages: list[bytes]) -> bytes:
     def encode_varint(value: int) -> bytes:
         parts = []
@@ -12,14 +14,16 @@ def msgpackPack(messages: list[bytes]) -> bytes:
         return bytes(parts)
     output = bytearray()
     for msg in messages:
-        output += encode_varint(len(msg))
-        output += msg
+        msgb = msgpack.packb(msg)
+        output += encode_varint(len(msgb))
+        output += msgb
     return bytes(output)
+
 def msgpackUnpack(data: bytes) -> list[bytes]:
     messages = []
     n = data
-    o = [0, 7, 14, 21, 28]  # décalages pour les bits
-    r = 0  # index courant dans le buffer
+    o = [0, 7, 14, 21, 28]
+    r = 0
     while r < len(n):
         size = 0
         i = 0
@@ -39,6 +43,7 @@ def msgpackUnpack(data: bytes) -> list[bytes]:
         end = start + size
         if end > len(n):
             raise ValueError("Incomplete message.")
-        messages.append(n[start:end])
+        messages.append(msgpack.unpackb(n[start:end]))
         r = end
     return messages
+

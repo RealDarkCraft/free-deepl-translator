@@ -1,0 +1,8 @@
+{
+    "1": "StartSessionRequest",
+    "2": "StartSessionResponse",
+    "3": null,
+    "4": "ParticipantRequest",
+    "5": "ParticipantResponse",
+    "6": "signalr.ClientErrorInfo"
+}

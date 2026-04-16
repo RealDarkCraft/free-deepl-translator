@@ -208,9 +208,8 @@ class SignalRMessageHandler:
 
     async def _handle_ping(self) -> None:
         self.client.logger.Info("Ping received")
-        with open("j.txt", "a") as f:
-            f.write("b")
         pong = [MessageType.PING]
         task = asyncio.create_task(self.client.send(msgpackPack([pong])))
         self.client.collector.append(task)
         self.client.logger.Info("Ping sent")
+    
